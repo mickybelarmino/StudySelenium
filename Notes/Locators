@@ -22,12 +22,12 @@ ID
 Xpath
 • //Tagname[@attribute='value']                                   => driver.findElement(By.xpath("//input[@placeholder='Name']"))
 • //Tagname[@attribute='value'][index]                            => driver.findElement(By.xpath("//input[@placeholder='Name']")[2])
-•	//tagname                                                       => driver.findElement(By.xpath("//button[2]"))
-•	//parentTagname/childTagname                                    => driver.findElement(By.xpath("//form/input[3]"))
-•	//button[contains(@class,'submit')]                             => driver.findElement(By.xpath("//button[contains(@class, 'submit')]"))
-•	//div[contains(@class,'login-container')] /p                     => driver.findElement(By.xpath("//div[contains(@class, 'login-container')]/p"))
-•	//header/div/button[1]/following-sibling::button[1]             => driver.findElement(By.xpath("//header/div/button[1]/following-sibling::button[1]"))
-•	//header/div/button[1]/parent::div/button[2]                    => driver.findElement(By.xpath("//header/div/button[1]/parent::div/button[2]"))
+• //tagname                                                       => driver.findElement(By.xpath("//button[2]"))
+• //parentTagname/childTagname                                    => driver.findElement(By.xpath("//form/input[3]"))
+• //button[contains(@class,'submit')]                             => driver.findElement(By.xpath("//button[contains(@class, 'submit')]"))
+• //div[contains(@class,'login-container')] /p                    => driver.findElement(By.xpath("//div[contains(@class, 'login-container')]/p"))
+• //header/div/button[1]/following-sibling::button[1]             => driver.findElement(By.xpath("//header/div/button[1]/following-sibling::button[1]"))
+• //header/div/button[1]/parent::div/button[2]                    => driver.findElement(By.xpath("//header/div/button[1]/parent::div/button[2]"))
 
 • Other examples
         driver.findElement(By.xpath("//input[@placeholder='Name']"))
@@ -41,6 +41,16 @@ Xpath
         driver.findElement(By.xpath("//header/div/button[1]/parent::div/button[2]"))
 =======================================================================================================================================================
 
+
+=======================================================================================================================================================
+CSS Selector
+• Class name -> tagname.classname ->  Button.signInBtn -> .error => driver.findElement(By.cssSelector(".reset-pwd-btn"))
+• Id -> tagname#id -> input#inputUsername => driver.findElement(By.cssSelector("#inputUsername"))
+• Tagname[attribute=’value’] => driver.findElement(By.cssSelector("input[placeholder='Email']"))
+• //Tagname[@attribute=’value’]:nth-child(index) => driver.findElement(By.cssSelector("input[type='text']:nth-child(3)"))
+• Parenttagname childtagname
+• input[type*='pass'] – CSS => driver.findElement(By.cssSelector("input[type*='pass']"))
+• tagname
 
 
 
