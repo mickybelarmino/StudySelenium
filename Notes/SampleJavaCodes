@@ -1,0 +1,63 @@
+//************************************Sample Split, Trim and charAT Codes - 1 *****************************************
+String s = "Rahul Shetty Academy";
+String[] splittedString = s.split("Shetty");
+System.out.println(splittedString[0]);
+System.out.println(splittedString[1]);
+System.out.println(splittedString[1].trim());
+
+for(int i =s.length()-1;i>=0;i--)
+{
+System.out.println(s.charAt(i));
+}
+}
+}
+
+//************************************Sample Split and Trim Codes - 2 *****************************************
+public String getPassword(WebDriver driver) throws InterruptedException {
+		driver.get("https://rahulshettyacademy.com/locatorspractice");
+		driver.findElement(By.linkText("Forgot your password?")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
+		String passwordText =  driver.findElement(By.cssSelector(".infoMsg")).getText();
+		//Please use temporary password 'rahulshettyacademy' to Login.
+		String[] passwordArray = passwordText.split("'");
+		String password = passwordArray[1].split("'")[0];
+		return password;
+	}
+
+
+//************************************Sample Methods Code *****************************************
+public class MethodsDemo {
+
+public static void main(String[] args) {
+
+MethodsDemo d = new MethodsDemo();
+
+String name = d.getData();
+
+System.out.println(name);
+
+MethodsDemo2 d1 = new MethodsDemo2();
+
+d1.getUserData();
+getData2();
+
+}
+
+public String getData()
+{
+System.out.println ("hello world");
+return "rahul shetty";
+}
+
+
+public static String getData2()
+{
+System.out.println ("hello world");
+return "rahul shetty";
+}
+
+
+
+
+
